@@ -1,0 +1,27 @@
+package taller.pkg09;
+import java.util.Scanner;
+public class Taller09 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingrese el numero de marcas:");
+        int limite = teclado.nextInt();
+        teclado.nextLine();
+        String[] nommarcas = new String[limite];
+        for (int i = 0; i < limite;) {
+            System.out.print("Ingrese la marca" + (i + 1) + ": ");
+            String marca = teclado.nextLine();
+            if (! (marca.startsWith("A") || marca.startsWith("C") || marca.startsWith("T")) ) {
+                nommarcas[i] = marca;
+                i++;
+            } else {
+                System.out.println("No permite Marcas con Inicial: A, C, T ");
+            }
+        }
+        System.out.println("Las marcas son:");
+        for(int i = 0; i < nommarcas.length; i++) {
+            if (nommarcas[i] != null) { 
+                System.out.println("> "+ nommarcas[i]);
+            }
+        }
+    }
+}

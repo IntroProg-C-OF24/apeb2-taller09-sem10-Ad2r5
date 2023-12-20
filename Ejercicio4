@@ -1,0 +1,22 @@
+package taller.pkg09;
+import java.util.Scanner;
+public class Ejercicio4 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        String[] estudiantes = {"Kimberly", "Hogan", "Teresa", "Luis", "Mark", "Jennifer", "Alcides"};
+        String letra;
+        boolean bandera = true;
+        while (bandera) {
+            System.out.println("Ingrese una letra");
+            letra=teclado.nextLine();
+            for (String estudiante : estudiantes) {
+                if (estudiante.startsWith(letra)) {
+                    bandera = false;
+                    System.out.println("La letra ingresada: " + letra + "es de  " + estudiante);
+                    System.out.println("Fin");
+                    break;
+                }
+            }
+        }
+    }
+}

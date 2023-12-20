@@ -1,0 +1,23 @@
+package taller.pkg09;
+public class Ejercicio2 {
+    public static void main(String[] args) {
+        int[] arreglo = {1, 10, 11, 12, 12, 13, 16, 2, 3, 4, 9, 10, 21};
+        double suma = 0.0;
+        for (int i = 0; i<arreglo.length; i++) {
+            suma += arreglo[i];
+        }
+        double mArit = suma/arreglo.length;
+        System.out.printf("La media aritmetica es: %.2f%n", mArit);
+        int arriArit = 0;
+        int abaArit = 0;
+        for (int i = 0; i<arreglo.length; i++) {
+            if (arreglo[i]>mArit) {
+                arriArit++;
+            } else if (arreglo[i]<mArit) {
+                abaArit++;
+            }
+        }
+        System.out.println("Elemntos por encima de la media aritmetica: " + arriArit);
+        System.out.println("Elementos por debajo de la media aritmetica: " + abaArit);
+    }
+}
